@@ -9,5 +9,7 @@ tar -xpzf ZAP_2.3.1_Linux.tar.gz
 echo Starting ZAP daemon
 ./ZAP_2.3.1/zap.sh -daemon & # Now fork into the background
 
+sleep 30 # hack for now
+
 echo Install Python wrapper to ZAP
 pip install python-owasp-zap-v2
