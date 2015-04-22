@@ -45,3 +45,6 @@ print 'Scan completed'
 print 'Hosts: ' + ', '.join(zap.core.hosts)
 print 'Alerts: '
 pprint (zap.core.alerts())
+for alert in zap.core.alerts():
+	if alert['risk'] == "High":
+		print "ERROR - Security issue of type %s" % alert['alert']
