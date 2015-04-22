@@ -43,8 +43,8 @@ print 'Scan completed'
 # Report the results
 
 print 'Hosts: ' + ', '.join(zap.core.hosts)
-print 'Alerts: '
-pprint (zap.core.alerts())
+
 for alert in zap.core.alerts():
 	if alert['risk'] == "High":
-		print "[ERROR] - Security issue of type %s" % alert['alert']
+		print "[ERROR] - Security vulnerabilities found in application"
+		sys.exit(1)
